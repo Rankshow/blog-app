@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { getFireStore } from "firebase/firestore"
+// import { getFireStore } from "firebase/firestore"
 
 
 
@@ -15,7 +15,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const db = getFireStore(app)
+// export const db = getFireStore(app)
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
