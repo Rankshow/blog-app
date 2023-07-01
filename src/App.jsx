@@ -7,8 +7,9 @@ import NavBar from './component/NavBar';
 
 
 
+
 function App() {
- const [isAuth, setIsAuth] = useState(false)
+ const [isAuth, setIsAuth] = useState(true);
  
   return (
     <>
