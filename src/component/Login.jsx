@@ -29,7 +29,6 @@ const Login = ({setIsAuth}) => {
         localStorage.setItem("isAuth", true);
         setIsAuth(true);
         navigate("/");
-        alert("You have successfully🎉  login");
       });
     };
      
@@ -44,6 +43,7 @@ const Login = ({setIsAuth}) => {
      {/* signIn button */}
      <button onClick={signIn} className='bg-white font-medium w-60 mx-auto mt-6  py-1 rounded-md hover:opacity-[.7]'>Sign in</button>
 
+     {/*  GooglesignIn */}
      <button onClick={googleSignIn} className='bg-white flex items-center justify-evenly font-medium w-60 mx-auto mt-6 mb-6 py-1 rounded-md hover:opacity-[.7]'>
      <img className='w-8 h-8' src={Logo} alt='google logo' /> Sign in with google
       </button>
