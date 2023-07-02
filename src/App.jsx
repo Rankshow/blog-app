@@ -3,13 +3,13 @@ import HomePage from "./component/Homepage"
 import CreatePost from './component/CreatePost';
 import Login from './component/Login';
 import { useState } from "react";
-import NavBar from './component/NavBar';
+import NavBar from './component/NavBar'
 
 
 
 
 function App() {
- const [isAuth, setIsAuth] = useState(true);
+ const [isAuth, setIsAuth] = useState(false);
  
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
           <NavBar />
            <Routes>
              <Route path='/' element={<HomePage />} />
-             <Route path='/createpost' element={<CreatePost />} />
+             <Route path='/createpost' element={<CreatePost isAuth={isAuth} />} />
              <Route path='/login' element={<Login setIsAuth={setIsAuth} />}/>
            </Routes>
         </Router>
