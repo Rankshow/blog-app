@@ -31,11 +31,13 @@ const deletePost = async (id) =>{
           postList.map((post) => {
             return( 
             <>
-            <div className='max-w-2xl w-80 mx-auto flex flex-col items-align'>
-              <h1 className='font-bold'>{post.title}</h1>
-              <p>{post.postText}</p>
-              <button onClick={() => {deletePost(post.id)}} ><FontAwesomeIcon icon={faTrashCan} style={{color: "#e7082a",}} /></button>
-             
+            <div className='max-w-2xl border mt-5 border-blue-950 rounded-r-md border-y-2 w-80 mx-auto flex flex-col items-align'>
+              <div className='flex justify-between py-2 px-2'>
+                <h1 className='font-bold'>{post.title}</h1>
+                <button onClick={() => {deletePost(post.id)}} ><FontAwesomeIcon icon={faTrashCan} style={{color: "#e7082a",}} /></button>
+              </div>
+              <p className='py-2 px-2'>{post.postText}</p>
+              <h1 className='text-blue-800 font-bold ml-2 mb-1'>@{post.author.name}</h1>   
             </div>
             </>
             )
